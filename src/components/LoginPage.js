@@ -36,7 +36,7 @@ export default function LoginPage() {
     <>
       <div className="container bigBoss">
         <div className="my-5 box">
-          <h1 className="heading">Enter details</h1>
+          <h1 className="heading">Where are You?</h1>
           <hr />
           <form action="" onSubmit={submitForm}>
             <div>
