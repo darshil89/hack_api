@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./loginPage.css";
-
+import axios from 'axios';
 export default function SignUp(props) {
-  const [name1, setName1] = useState("");
-  const [name2, setName2] = useState("");
+  const [firstName, setName1] = useState("");
+  const [lastName, setName2] = useState("");
   const [email, setEmail] = useState("");
   const [password1, setPassword1] = useState("");
   const [password2, setPassword2] = useState("");
@@ -12,20 +12,35 @@ export default function SignUp(props) {
   const Submit = (e) => {
     e.preventDefault();
 
-    if (password1.localeCompare(password2) == 0) {
+    if (password1.localeCompare(password2) === 0) {
       const newEntry = {
-        FirstName: name1,
-        LastName: name2,
+        firstName: firstName,
+        lastName: lastName,
         email: email,
         password: password1,
-        password: password2,
+        password2: password2,
       };
       setAllentry([...allentry, newEntry]);
       console.log(allentry);
+      axios.post('http://localhost:3001/signin', newEntry)
+      
     } else {
       props.showAlert("Password Not Matched", "warning");
     }
   };
+  const register= async()=>{
+    const UserData = await fetch(
+      "http://localhost:3001/signin",
+      {
+        method : "POST",
+
+      }
+    )
+    // We gonna send them to login page after this with the user data
+
+
+    goToTravel()
+  }
   const goToTravel = () => {
     console.log("gototravel");
   };
@@ -34,11 +49,11 @@ export default function SignUp(props) {
     <>
       <div className="container bigboss d-flex">
         <div className="my-5 b1">
-          <form action="" className="box" onSubmit={Submit}>
+          <form action="signin" className="box" onSubmit={Submit} method="post">
             <h1 className="heading">Create Yourself</h1>
             <hr />
             <div className="one">
-              <label htmlFor="name1" className="question">
+              <label htmlFor="firstName" className="question">
                 First Name
               </label>
               <input
@@ -46,14 +61,14 @@ export default function SignUp(props) {
                 type="text"
                 required
                 placeholder="Enter Your First Name"
-                name="name"
+                name="firstName"
                 autoComplete="off"
-                id="name"
+                id="firstName"
               />
             </div>
 
             <div className="two">
-              <label htmlFor="name2" className="question">
+              <label htmlFor="lastName" className="question">
                 Last Name
               </label>
               <input
@@ -62,8 +77,8 @@ export default function SignUp(props) {
                 type="text"
                 placeholder="Enter Your Last Name"
                 required
-                name="name2"
-                id="name2"
+                name="lastName"
+                id="lastName"
               />
             </div>
 
@@ -112,7 +127,7 @@ export default function SignUp(props) {
                 id="Cpassword"
               />
             </div>
-            <button type="submit" onClick={goToTravel} className="go">
+            <button type="submit" onClick={register} className="go">
               Submit
             </button>
           </form>
