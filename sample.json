@@ -1,0 +1,99 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "datasource": {
+          "sourcename": "openstreetmap",
+          "attribution": "© OpenStreetMap contributors",
+          "license": "Open Database License",
+          "url": "https://www.openstreetmap.org/copyright"
+        },
+        "name": "Jamshedpur",
+        "country": "India",
+        "country_code": "in",
+        "state": "Jharkhand",
+        "state_district": "Purbi Singhbhum",
+        "county": "Golmuri-Cum-Jugsalai",
+        "city": "Jamshedpur",
+        "postcode": "831001",
+        "lon": 86.2029579,
+        "lat": 22.8015194,
+        "state_code": "JH",
+        "formatted": "Jamshedpur - 831001, JH, India",
+        "address_line1": "Jamshedpur",
+        "address_line2": "Jamshedpur - 831001, JH, India",
+        "category": "populated_place",
+        "timezone": {
+          "name": "Asia/Kolkata",
+          "offset_STD": "+05:30",
+          "offset_STD_seconds": 19800,
+          "offset_DST": "+05:30",
+          "offset_DST_seconds": 19800,
+          "abbreviation_STD": "IST",
+          "abbreviation_DST": "IST"
+        },
+        "result_type": "postcode",
+        "rank": {
+          "importance": 0.4810450092007547,
+          "confidence": 1,
+          "confidence_city_level": 1,
+          "match_type": "full_match"
+        },
+        "place_id": "51c0bd2143fd8c5540590b1c1a6030cd3640f00103f9010924bf2100000000c0020792030a4a616d73686564707572"
+      },
+      "geometry": { "type": "Point", "coordinates": [86.2029579, 22.8015194] },
+      "bbox": [86.0429579, 22.6415194, 86.3629579, 22.9615194]
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "datasource": {
+          "sourcename": "openstreetmap",
+          "attribution": "© OpenStreetMap contributors",
+          "license": "Open Database License",
+          "url": "https://www.openstreetmap.org/copyright"
+        },
+        "name": "Jamshedpur",
+        "country": "India",
+        "country_code": "in",
+        "state": "Uttar Pradesh",
+        "state_district": "Moradabad",
+        "county": "Thakurdwara",
+        "city": "Jamshedpur",
+        "village": "Jamshedpur",
+        "lon": 78.8048457,
+        "lat": 29.0001834,
+        "state_code": "UP",
+        "formatted": "Jamshedpur, Thakurdwara, India",
+        "address_line1": "Jamshedpur",
+        "address_line2": "Thakurdwara, India",
+        "category": "populated_place",
+        "timezone": {
+          "name": "Asia/Kolkata",
+          "offset_STD": "+05:30",
+          "offset_STD_seconds": 19800,
+          "offset_DST": "+05:30",
+          "offset_DST_seconds": 19800,
+          "abbreviation_STD": "IST",
+          "abbreviation_DST": "IST"
+        },
+        "result_type": "city",
+        "rank": {
+          "importance": 0.27501,
+          "confidence": 1,
+          "confidence_city_level": 1,
+          "match_type": "full_match"
+        },
+        "place_id": "51e1f4899782b35340598900f1040c003d40f00103f9011e6a2ae701000000c0020892030a4a616d73686564707572"
+      },
+      "geometry": { "type": "Point", "coordinates": [78.8048457, 29.0001834] },
+      "bbox": [78.7848457, 28.9801834, 78.8248457, 29.0201834]
+    }
+  ],
+  "query": {
+    "text": "jamshedpur",
+    "parsed": { "city": "jamshedpur", "expected_type": "unknown" }
+  }
+}
