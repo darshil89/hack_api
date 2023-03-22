@@ -12,6 +12,8 @@ import userRoutes from "./routes/users.js";
 import { register } from "./controllers/auth.js";
 import { verifyToken } from "./middleware/auth.js";
 import User from "./models/User.js";
+import axios from 'axios';
+import bcrypt from "bcrypt";
 
 /* CONFIGURATIONS */
 const __filename = fileURLToPath(import.meta.url);
@@ -83,3 +85,24 @@ mongoose
     // User.insertMany(users);
   })
   .catch((error) => console.log(`${error} did not connect`));
+
+
+
+// Register Route
+app.post('/signin', function(req, res) {
+  var firstName = req.body.firstName
+  var lastName = req.body.lastName
+  var email = req.body.email
+  var password = req.body.password
+  
+  const NewUser= {
+    firstName : firstName,
+    lastName : lastName,
+    email : email,
+    password : password
+  }
+  console.log(NewUser)
+  
+
+  
+});

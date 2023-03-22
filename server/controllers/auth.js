@@ -5,7 +5,7 @@ import User from "../models/User.js";
 /* REGISTER USER */
 // In this part we will take the Login information such as First name and email from the login page frontend and then register the user
 // into our database.Then we will take the price data from the next pages 
-export const register = async (req, res) => {
+export const register = async (req, res, User) => {
   try {
     const {
       firstName,
